@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <div class="container">
+            {{ partial "header.html" . }}
+            <summary class="summary">
+                <h2 class="title">Tags</h2>
+                <summary class="description">What I tend to ramble about</summary>
+                <br>
+            </summary>
+            <div class="post">
+                {{ range first 10 .Site.Taxonomies.tags.ByCount }}
+                    <a class="tag" href="{{ $.Site.BaseURL}}tags/{{ .Name }}">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </body>
+</html>

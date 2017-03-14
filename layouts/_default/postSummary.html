@@ -1,0 +1,8 @@
+<summary class="summary">
+    <h2 class="title">{{ .Title }}</h2>
+    <time class="publishedDate">{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}</time>
+    <br>
+    <summary class="description">{{ .Params.description }}</summary>
+    <br>
+    {{ .Render "tags" }}
+</summary>

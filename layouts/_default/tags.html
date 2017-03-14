@@ -1,0 +1,5 @@
+{{ with .Params.tags }}
+    {{ range . }}
+        <span class="tag" onclick="window.location.href = '{{ $.Site.BaseURL}}tags/{{ . }}'; event.preventDefault()">{{ . }}</span>
+    {{ end }}
+{{ end }}

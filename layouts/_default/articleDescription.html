@@ -1,0 +1,13 @@
+<article>
+	<a href="{{ .Permalink }}">
+		<h2>
+			{{ .Title }}
+		</h2>
+		<h3>
+			{{ with .Site.Params.DateForm }}{{ $.Date.Format . }}{{ else }}{{ $.Date.Format "Mon, Jan 2, 2006" }}{{ end }}
+		</h3>
+		<p>
+			{{ .Params.description }}
+		</p>
+	</a>
+</article>
